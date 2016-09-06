@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ClassLoader:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="com.sq.war">
+      <element id="artifact" artifact-name="ClassLoader:war exploded" />
+    </root>
+  </artifact>
+</component>
