@@ -22,13 +22,18 @@ public class Multirun implements Runnable {
                 HowswapCL cl = new HowswapCL(url, new String[]{"com.sq.classloader.Howswap.GetPrint"});
                 Class cls = cl.loadClass("com.sq.classloader.Howswap.GetPrint");
 
-                GetPrint getPrint = (GetPrint) cls.newInstance();
-                getPrint.Output();
-
-//                System.out.println("Runnable" + IGetPrint.class.getClassLoader().toString());
-//                IGetPrint getPrint = (IGetPrint) cls.newInstance();
+//                System.out.println("Runnable" + GetPrint.class.getClassLoader().toString());
+//                GetPrint getPrint = (GetPrint) cls.newInstance();
 //                getPrint.Output();
 
+                System.out.println("class:" + Multirun.class.getClassLoader());
+                System.out.println("Runnable:" + IGetPrint.class.getClassLoader().toString());
+//                IGetPrint getPrint = (IGetPrint) cls.newInstance();
+                IGetPrint getPrint ;
+                getPrint = (IGetPrint) cls.newInstance();
+                getPrint.Output();
+
+//
 //                Object foo = cls.newInstance();
 //                System.out.println(foo.getClass().getClassLoader());
 //                // 被调用函数的参数

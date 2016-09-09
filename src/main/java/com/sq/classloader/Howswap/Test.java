@@ -13,8 +13,7 @@ public class Test {
     public static void main(String[] args) {
 
         // 热部署测试代码
-        Thread t;
-        t = new Thread(new Multirun());
+        Thread t = new Thread(new Multirun());
         t.start();
     }
 }
